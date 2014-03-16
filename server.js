@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/articles/:id', function (req, res) {
-	var article_id = req.params.id;
+	var article_id = parseInt(req.params.id);
 	
 	var reqCookie = req.cookies.policy_mic || {};
 	var readingList = reqCookie.readingList || [];
@@ -18,8 +18,11 @@ app.get('/articles/:id', function (req, res) {
 	
 	res.cookie("policy_mic", resCookie)
 	
-	console.log(readingList)
-	res.send("You are viewing article number: " + article_id)
+	var article = {article: {
+		title: "Abe to clone policy mic",
+		body: "in progress now"
+	}}
+	res.render('show.html.ejs', article)
 })
 
 app.get('/search', function (req, res) {
