@@ -2,6 +2,7 @@ var express = require('express');
 var app =  express();
 
 app.use(express.cookieParser());
+app.engine('html', require('ejs').renderFile);
 
 app.get('/', function (req, res) {
 	res.send('hello World!')
@@ -22,7 +23,7 @@ app.get('/articles/:id', function (req, res) {
 		title: "Abe to clone policy mic",
 		body: "in progress now"
 	}}
-	res.render('show.html.ejs', article)
+	res.render('articles/show.html.ejs', article)
 })
 
 app.get('/search', function (req, res) {
