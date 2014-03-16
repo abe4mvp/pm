@@ -1,0 +1,11 @@
+<% include ../layouts/header.html %>
+
+<h2>Search Results</h2>
+<ol>
+<% articles.forEach(function(article) { %>
+<li>
+		<a class="blue" href="/articles/<%= article.id %>"><%= article.title %></a>
+		<p><%= article.body %></p>
+	</li>
+<% }) %>
+</ol>

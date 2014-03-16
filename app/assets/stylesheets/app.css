@@ -1,31 +1,109 @@
 li, ul {
-	list-style:none;
+	display:block;
+	float:left;
 }
 
-.title:hover {
+a.title:hover {
+	color:blue;
+	background-color:rgba(0,0,0,0.1);
+}
+
+#header .title:hover {
 	color:blue;
 }
 
 img {
 	height:200px;
 	width:200px;
+	
+}
+
+.blue {
+	color:blue;
 }
 
 a.title {
 	position:absolute;
-	top:0;
-	left:0;
 	display:block;
-	height:100%;
-	width:100%;
+	width:200px;
+	height:200px;
 	text-align:center;
 	text-decoration:none;
 	color:inherit;
 	margin:0 auto;
 	vertical-align: middle; 
+	font-family: Georgia;
+	color:white;
+	background-color:rgba(0,0,0,0.5);
+	font-size:1.2em;
+	border:1px solid white;
 }
 
 li.teaser {
+	list-style:none;
 	position:relative;
 	display:inline-block;
+	
+}
+
+#header h1 {
+	float:left;
+	display:inline-block;
+	color:white;
+	margin-left:20px;
+	
+}
+#header {
+	height:80px;
+	background-color:rgba(0,0,0,0.5);
+	border-radius:5px;
+}
+
+#search {
+	padding-top:20px;
+	float:right;
+	display:inline-block;
+	margin:auto;
+	position:relative;
+
+}
+
+#q {
+	width:300px;
+	box-sizing: content-box;
+	height:30px;
+}
+
+#icon {
+	background-image:url("https://cdn1.iconfinder.com/data/icons/meBaze-Freebies/512/search.png");
+	height:35px;
+	width:35px;
+	background-size:35px 35px;
+	background-repeat:no-repeat;
+	border-top-left-radius:20px;
+	border-bottom-left-radius:20px;
+	border-top-right-radius:20px;
+	margin-right:10px;
+}
+
+ol {
+	background-color:white;
+	display:block;
+	width:90%;
+	min-height:300px;
+	
+}
+ol  li {
+	list-style:decimal;
+	display:list-item;
+	
+}
+
+.container:after {
+	clear:both;
+	content: "";
+}
+
+html {
+	background-color:grey;
 }
