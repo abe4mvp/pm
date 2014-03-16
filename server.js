@@ -1,8 +1,7 @@
 var express = require('express');
 var app =  express();
+require('./config.js').init(app);
 
-app.use(express.cookieParser());
-app.engine('html', require('ejs').renderFile);
 
 app.get('/', function (req, res) {
 	res.send('hello World!')
@@ -23,6 +22,8 @@ app.get('/articles/:id', function (req, res) {
 		title: "Abe to clone policy mic",
 		body: "in progress now"
 	}}
+	
+	// res.sendfile('stylesheets/show.css')
 	res.render('articles/show.html.ejs', article)
 })
 
