@@ -4,7 +4,10 @@ var Article = mongoose.model('Article');
 exports.init = function (app) {
 	
 	app.get('/', function (req, res) {
-		res.send('hello World!')
+		Article.find(function (error, articles) {
+			res.render("articles/index.html.ejs", { articles: articles })
+		}) 
+		
 	});
 
 	app.get('/articles/:id', function (req, res) {
@@ -18,13 +21,11 @@ exports.init = function (app) {
 	
 		res.cookie("policy_mic", resCookie)
 		 	
-		var article = {article: {
-			title: "Abe to clone policy mic",
-			body: "in progress now"
-		}}
 		
-		// var article = Article.findById(articleId);
-		res.render('articles/show.html.ejs', article)
+		Article.findById(articleId, function (error, article) {
+			res.render('articles/show.html.ejs', { article: article})
+		});
+		
 	});
 
 }

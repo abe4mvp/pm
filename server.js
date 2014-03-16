@@ -23,6 +23,8 @@ controllers.forEach(function (controller) {
   controller.init(app);
 });
 
+// require('./seeds.js')
+
 
 
 
