@@ -7,6 +7,7 @@ exports.init = function (app) {
 
 	app.engine('html', require('ejs').renderFile);
 
-	app.use('/stylesheets', express.static('./assests/stylesheets'));
+	app.use('/stylesheets', express.static('./app/assets/stylesheets'));
+	
 	app.set('views', './app/views');
 }
