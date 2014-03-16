@@ -1,0 +1,31 @@
+li, ul {
+	list-style:none;
+}
+
+.title:hover {
+	color:blue;
+}
+
+img {
+	height:200px;
+	width:200px;
+}
+
+a.title {
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	height:100%;
+	width:100%;
+	text-align:center;
+	text-decoration:none;
+	color:inherit;
+	margin:0 auto;
+	vertical-align: middle; 
+}
+
+li.teaser {
+	position:relative;
+	display:inline-block;
+}

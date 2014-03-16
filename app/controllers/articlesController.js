@@ -5,7 +5,7 @@ exports.init = function (app) {
 	
 	app.get('/', function (req, res) {
 		Article.find(function (error, articles) {
-			res.render("articles/index.html.ejs", { articles: articles })
+			res.render("articles/index.ejs", { articles: articles })
 		}) 
 		
 	});
@@ -23,7 +23,7 @@ exports.init = function (app) {
 		 	
 		
 		Article.findById(articleId, function (error, article) {
-			res.render('articles/show.html.ejs', { article: article})
+			res.render('articles/show.ejs', { article: article})
 		});
 		
 	});

@@ -8,7 +8,11 @@ exports.init = function (app) {
 			if (error) {
 				res.send("No results found");
 			} else {
-				res.render("articles/index.html.ejs", { articles: articles });
+				if (articles.length > 0){
+					res.render("articles/index.ejs", { articles: articles });
+				} else {
+					res.send("Sorry, no results matching your query")
+				}
 			}
 		})
 	})
