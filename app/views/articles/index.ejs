@@ -1,10 +1,12 @@
 <% include ../layouts/header.html %>
 
-<ul>
-<% articles.forEach(function(article) { %>
-<li class="teaser">
-		<a class="title" href="/articles/<%= article.id %>"><%= article.title %></a>
-		<img src="<%= article.img %>">
-	</li>
-<% }) %>
-</ul>
+<div id="main">
+	<ul class="container">
+	<% articles.forEach(function(article) { %>
+	<li class="teaser">
+			<a class="title" href="/articles/<%= article.id %>"><%= article.title %></a>
+			<img src="<%= article.img %>">
+		</li>
+	<% }) %>
+	</ul>
+</div>

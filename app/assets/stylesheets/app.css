@@ -1,4 +1,4 @@
-li, ul {
+li {
 	display:block;
 	float:left;
 }
@@ -8,13 +8,13 @@ a.title:hover {
 	background-color:rgba(0,0,0,0.1);
 }
 
-#header .title:hover {
+header .title:hover {
 	color:blue;
 }
 
 img {
-	height:200px;
-	width:200px;
+	height:300px;
+	width:300px;
 	
 }
 
@@ -25,8 +25,8 @@ img {
 a.title {
 	position:absolute;
 	display:block;
-	width:200px;
-	height:200px;
+	width:300px;
+	height:300px;
 	text-align:center;
 	text-decoration:none;
 	color:inherit;
@@ -46,17 +46,19 @@ li.teaser {
 	
 }
 
-#header h1 {
+header h1 {
 	float:left;
 	display:inline-block;
 	color:white;
 	margin-left:20px;
 	
 }
-#header {
+header {
 	height:80px;
 	background-color:rgba(0,0,0,0.5);
 	border-radius:5px;
+	width:900px;
+	border:2px solid black;
 }
 
 #search {
@@ -106,4 +108,16 @@ ol  li {
 
 html {
 	background-color:grey;
+}
+
+#main {
+	height:1000px;
+	width:1000px;
+	margin:auto 0;
+}
+
+#main ul {
+	margin:auto;
+	position:absolute;
+	padding:0;
 }
